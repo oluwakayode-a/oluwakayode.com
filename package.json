@@ -14,5 +14,9 @@
     "nuxt": "^3.9.0",
     "vue": "^3.3.13",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@formkit/auto-animate": "^0.8.1",
+    "vue3-marquee": "4.2.0-beta.1"
   }
 }
