@@ -74,13 +74,19 @@
         </span>
       </div>
 
-      <Vue3Marquee class="bg-black py-3">
+      <Vue3Marquee class="bg-black py-3" 
+        :pause-on-hover="true">
         <div v-for="skill in skills">
-          <div class="flex items-center mr-10 text-white">
-            {{ skill }}
+          <div class="flex items-center mr-10 text-white gap-2">
+            <span v-html="skill.icon" class="w-6 h-6"></span> 
+            <span class="capitalize">{{ skill.name }}</span> 
           </div>
         </div>
       </Vue3Marquee>
+    </section>
+
+    <section class="px-[1.5rem] pt-[3.34rem]">
+      <h1 class="text-[2.5rem] font-bold text-center">My Portfolio</h1>
     </section>
   </div>
 </template>
@@ -102,13 +108,11 @@
 </style>
 
 <script setup lang="ts">
+import { skills } from "~/utils"
+
 useHead({
   title: "Kayode Oladipo | Fullstack Software Developer"
 })
 
 const showNavBar = ref(false)
-
-const skills = ref([
-  "django", "python"
-])
 </script>
