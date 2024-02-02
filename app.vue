@@ -4,18 +4,34 @@
       <img src="~/assets/images/Vector.svg" class="w-full" alt="">
     </span>
 
-    <header class="px-[1.5rem] pt-[2.5rem]">
-      <div class="border-2 border-black relative p-4 shadow-custom">
+    <header class="px-[1.5rem] md:w-[70%] md:mx-auto pt-[2.5rem]">
+      <div class="border-2 border-black relative p-4 md:p-0 shadow-custom">
         <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -top-[5px] -left-[5px]"></span>
         <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -top-[5px] -right-[5px]"></span>
         <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -bottom-[5px] -left-[5px]"></span>
         <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -bottom-[5px] -right-[5px]"></span>
 
-        <div class="flex justify-between">
-          <div class="flex items-center gap-3">
-            <img src="~/assets/images/logo.jpg" alt="" class="w-10">
-            <span class="font-bold text-lg">Oluwakayode</span>
-          </div>
+        <div class="flex justify-between md:justify-normal">
+          <a href="/" class="md:border-r-black md:border-r-2">
+            <div class="flex items-center gap-3 md:p-4">
+              <img src="~/assets/images/logo.jpg" alt="" class="w-10">
+              <span class="font-bold text-lg">Oluwakayode</span>
+            </div>
+          </a>
+
+          <a href="#about" class="flex items-center md:border-r-black md:border-r-2">
+            <span class="p-4 font-bold">About</span>
+          </a>
+
+          <a href="#portfolio" class="flex items-center md:border-r-black md:border-r-2">
+            <span class="p-4 font-bold">Portfolio</span>
+          </a>
+
+          <a href="#portfolio" class="flex items-center ">
+            <span class="p-4 font-bold">Hire Me</span>
+          </a>
+
+          
           <svg class="w-8 h-8 block md:hidden cursor-pointer" @click="() => showNavBar = !showNavBar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
@@ -45,22 +61,22 @@
     <section class="pt-[6rem] px-[1.5rem]">
       <img src="~/assets/images/Frame 14.svg" alt="">
       <p class="text-[2.265rem] font-bold stroke-black stroke-2">
-        I design ✍️ top notch <span class="text-highlight">websites</span> 
+        I build ✍️ top notch <span class="text-highlight">web apps</span> 
       </p>
 
       <div class="relative">
-        <button class="border-4 border-black font-bold mt-[1.5rem] rotate-[0.543deg] px-[1.8rem] py-[1rem] bg-[#BAE6FF] text-base rounded-[3rem]">
-          See Portfolio
-        </button>
+        <a href="#portfolio" class="inline-block border-4 border-black font-bold mt-[1.5rem] rotate-[0.543deg] px-[1.8rem] py-[1rem] bg-[#BAE6FF] text-base rounded-[3rem]">
+          Let's talk!
+        </a>
 
-        <img src="~/assets/images/Frame 13.svg" class="absolute left-[9.6rem] -bottom-[1rem]" alt="">
+        <img src="~/assets/images/Frame 13.svg" class="absolute left-[8.6rem] -bottom-[1rem]" alt="">
       </div>
     </section>
 
     <section class="px-[1.5rem] pt-[4.26rem]">
-      <div class="relative">
+      <div class="relative sm:w-[60%]">
+        <img src="~/assets/images/Size7.png" alt="" class="w-full object-contain">
         <img src="~/assets/images/Arrow_07.png" class="absolute -top-[3.2rem] right-[5rem]" alt="">
-        <img src="~/assets/images/Size7.png" alt="">
         <img src="~/assets/images/Frame 20.svg" class="absolute -top-[1rem] left-[2rem]" alt="">
         <span class="absolute uppercase -top-3 left-[3.6rem] -rotate-[40deg] font-medium">kay</span>
 
@@ -86,31 +102,56 @@
     </section>
 
     <section class="px-[1.5rem] pt-[3.34rem]">
-      <div class="relative">
-        <h1 class="text-[2.5rem] font-bold">My Portfolio</h1>
-        <img class="absolute left-[4.5rem] bottom-0" src="~/assets/images/Underline_05.svg" alt="">
-        <img src="~/assets/images/Frame 18.svg" alt="" class="absolute right-0 -top-4">
+
+      <div class="flex justify-center gap-6 sm:gap-10">
+        <div class="relative">
+          <h1 class="text-[2rem] font-bold">My Portfolio</h1>
+          <img class="absolute left-[3.5rem] bottom-[39px] w-[72%]" src="~/assets/images/Underline_05.svg" alt="">
+        </div>
+        
+        <img src="~/assets/images/Frame 18.svg" alt="">
       </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 mt-[4.5rem]">
+        <div @click="goToPage(project.url)" class="relative py-[1.7rem] hover:rotate-3 cursor-pointer transition" v-for="project in projects">
+          <!-- <img src="~/assets/images/Border.svg" alt="" class="absolute inset-0 w-full h-full">
+          <img src="~/assets/images/Border.svg" alt="" class="absolute -inset-1 opacity-50 w-full h-full"> -->
 
-      <div @click="goToPage(project.url)" class="mt-[4.5rem] relative py-[1.7rem] px-[1.8rem] hover:rotate-3 cursor-pointer transition" v-for="project in projects">
-        <img src="~/assets/images/Border.svg" alt="" class="absolute inset-0">
-        <img src="~/assets/images/Border.svg" alt="" class="absolute -inset-1 opacity-50">
-
-        <div class="w-full h-full relative">
-          <img :src="project.image" class="border-2 border-black h-[10.8rem] object-center object-cover mx-auto" alt="">
+          <svg id="top-border" class="absolute top-0" viewBox="0 0 570 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.71875 4.90256C34.308 4.90256 60.9965 4.90256 76.7323 4.90256M76.7323 4.90256C92.4681 4.90256 162.335 5.20775 191.918 5.20775M76.7323 4.90256C76.7323 4.90256 110.856 3.9525 130.863 3.9525C150.87 3.9525 191.918 5.20775 191.918 5.20775M565.891 5.20775C534.582 5.20775 549.058 4.90256 517.961 4.90256C500.236 4.90256 478.551 5.4112 447.465 5.20775M275.188 3.9525C296.702 3.98189 409.148 4.95698 447.465 5.20775M275.188 3.9525C252.939 3.9221 221.501 5.20776 191.918 5.20775M275.188 3.9525C275.188 3.9525 329.133 3.9525 359.346 3.9525M447.465 5.20775C447.465 5.20775 389.558 3.9525 359.346 3.9525M191.918 5.20775C210.05 5.20775 252.09 5.20775 275.188 5.20775C298.287 5.20775 340.918 4.37091 359.346 3.9525" stroke="black" stroke-width="6.28125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           
-          <div class="flex justify-between items-center mt-5">
-            <h1 class="font-bold text-[20px]">{{ project.name }}</h1>
-            <NuxtLink :to="project.url" class="bg-black p-[0.5rem] shadow-[2.36px_2.36px_0px_#8E8F87]">
-              <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.59821 1.37427L8.99524 8.03206M8.59821 1.37427L1.94042 1.7713M8.59821 1.37427L1.294 9.60489" stroke="#FDFDFD" stroke-width="1.41492" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <svg id="bottom-border" class="absolute bottom-0" viewBox="0 0 570 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.71875 4.90256C34.308 4.90256 60.9965 4.90256 76.7323 4.90256M76.7323 4.90256C92.4681 4.90256 162.335 5.20775 191.918 5.20775M76.7323 4.90256C76.7323 4.90256 110.856 3.9525 130.863 3.9525C150.87 3.9525 191.918 5.20775 191.918 5.20775M565.891 5.20775C534.582 5.20775 549.058 4.90256 517.961 4.90256C500.236 4.90256 478.551 5.4112 447.465 5.20775M275.188 3.9525C296.702 3.98189 409.148 4.95698 447.465 5.20775M275.188 3.9525C252.939 3.9221 221.501 5.20776 191.918 5.20775M275.188 3.9525C275.188 3.9525 329.133 3.9525 359.346 3.9525M447.465 5.20775C447.465 5.20775 389.558 3.9525 359.346 3.9525M191.918 5.20775C210.05 5.20775 252.09 5.20775 275.188 5.20775C298.287 5.20775 340.918 4.37091 359.346 3.9525" stroke="black" stroke-width="6.28125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
 
-            </NuxtLink>
-          </div>
+          <svg id="left-border" class="absolute left-0 top-0" viewBox="0 0 10 569" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.2902 3.39062C5.2902 63.1175 5.92662 87.1203 5.92662 150.639M5.92662 150.639C5.92662 214.158 5.82822 329.929 5.2902 407.738C4.75218 485.547 4.33473 561.284 4.33473 561.284C4.33473 572.274 3.1579 559.305 3.24373 553.457C3.35103 546.147 4.38063 338.177 4.38063 320.022C4.38063 301.866 5.2902 209.446 5.92662 150.639Z" stroke="black" stroke-width="6.28125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
 
-          <div class="flex items-center gap-3 mt-4">
-            <span v-for="tech in project.technologies" v-html="tech" class="w-6 h-6" />
+          <svg id="right-border" class="absolute right-0 top-0" viewBox="0 0 10 569" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.2902 3.39062C5.2902 63.1175 5.92662 87.1203 5.92662 150.639M5.92662 150.639C5.92662 214.158 5.82822 329.929 5.2902 407.738C4.75218 485.547 4.33473 561.284 4.33473 561.284C4.33473 572.274 3.1579 559.305 3.24373 553.457C3.35103 546.147 4.38063 338.177 4.38063 320.022C4.38063 301.866 5.2902 209.446 5.92662 150.639Z" stroke="black" stroke-width="6.28125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+
+
+  
+          <div class="w-full h-full relative px-[1.8rem]">
+            <img :src="project.image" class="w-full border-2 border-black h-[10.8rem] object-center object-cover mx-auto" alt="">
+            
+            <div class="flex justify-between items-center mt-5">
+              <h1 class="font-bold text-base">{{ project.name }}</h1>
+              <NuxtLink :to="project.url" class="bg-black p-[0.5rem] shadow-[2.36px_2.36px_0px_#8E8F87]">
+                <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.59821 1.37427L8.99524 8.03206M8.59821 1.37427L1.94042 1.7713M8.59821 1.37427L1.294 9.60489" stroke="#FDFDFD" stroke-width="1.41492" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+  
+              </NuxtLink>
+            </div>
+  
+            <div class="flex items-center gap-3 mt-2">
+              <span v-for="tech in project.technologies" v-html="tech" class="w-5 h-5 border rounded-full pr-[2px]" />
+            </div>
           </div>
         </div>
       </div>
@@ -138,7 +179,7 @@
         </defs>
       </svg>
 
-      <div class="grid grid-cols-1 gap-4 [&>*:nth-child(odd)]:rotate-3 [&>*:nth-child(even)]:-rotate-3">
+      <div class="grid grid-cols-1 gap-4 sm:gap-7 [&>*:nth-child(odd)]:rotate-3 [&>*:nth-child(even)]:-rotate-3">
         <div class="border-2 border-black p-5 shadow-[5.73px_5.73px_0px_0px_#BFBFB4]" v-for="review in reviews">
           <div class="font-medium text-[15px]">
             {{ review.text }}
@@ -157,23 +198,55 @@
 
     </section>
 
-    <section class="px-[1.5rem] pt-[5rem] pb-2">
-      <div class="relative border-2 border-black shadow-[5.73px_5.73px_0px_0px_#BFBFB4] px-4 pb-[3.74rem]">
-        <img src="~/assets/images/Vector (3).svg" alt="">
+    <section class="px-[1.5rem] pt-[5rem] pb-[5.8rem]">
+      <div class="relative border-2 border-black shadow-[5.73px_5.73px_0px_0px_#BFBFB4] px-4 py-[3.74rem]">
+        <img src="~/assets/images/Vector (3).svg" alt="" class="absolute -top-10 inset-x-[35%]">
 
         <h1 class="font-medium text-lg text-center">
           Looking to build the next big thing?
         </h1>
 
         <div class="flex justify-center items-end">
-          <button class="border-4 shadow-lg border-black font-bold mt-[1.5rem] px-[1.8rem] py-[0.6rem] bg-[#BAE6FF] text-base rounded-[3rem]">
+          <button class="border-4 shadow-[4.73px_4.73px_0px_0px_#BFBFB4] border-black font-bold mt-[1.5rem] px-[1.8rem] py-[0.6rem] bg-[#BAE6FF] text-base rounded-[3rem]">
             Let's Talk
           </button>
 
-          <!-- <img src="~/assets/images/Frame 13.svg" alt=""> -->
         </div>
       </div>
     </section>
+
+    <hr class="border-2 border-black">
+
+    <footer class="py-[2.4rem] space-y-5">
+      <div class="flex items-center justify-center gap-3">
+        <img src="~/assets/images/logo.jpg" alt="" class="w-10">
+        <span class="font-bold text-2xl">Oluwakayode</span>
+      </div>
+
+      <div class="text-center">&copy; {{ new Date().getFullYear() }}</div>
+
+
+      <div class="flex justify-center gap-6">
+        <a href="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-6 h-6">
+            <g fill="#181616">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g>
+          </svg>
+        </a>
+
+        <a href="">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#0076b2" d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z"/><path fill="#fff" d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"/></svg>
+        </a>
+
+        <a href="">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#1d9bf0" d="M114.896 37.888c.078 1.129.078 2.257.078 3.396 0 34.7-26.417 74.72-74.72 74.72v-.02A74.343 74.343 0 0 1 0 104.21c2.075.25 4.16.375 6.25.38a52.732 52.732 0 0 0 32.615-11.263A26.294 26.294 0 0 1 14.331 75.09c3.937.76 7.993.603 11.857-.453-12.252-2.475-21.066-13.239-21.066-25.74v-.333a26.094 26.094 0 0 0 11.919 3.287C5.5 44.139 1.945 28.788 8.913 16.787a74.535 74.535 0 0 0 54.122 27.435 26.277 26.277 0 0 1 7.598-25.09c10.577-9.943 27.212-9.433 37.154 1.139a52.696 52.696 0 0 0 16.677-6.376A26.359 26.359 0 0 1 112.92 28.42 52.227 52.227 0 0 0 128 24.285a53.35 53.35 0 0 1-13.104 13.603z"/></svg>
+        </a>
+        
+      </div>
+      <div class="text-center text-xs">
+        Design by <a class="font-bold text-blue-400" href="https://twitter.com/zainab_nisa_">Zina</a>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -190,6 +263,18 @@
   height: 20%;
   bottom: 10px;
   z-index: -1;
+}
+
+#top-border, #bottom-border {
+  width: calc(100% + 20px);
+  left: -10px;
+  box-shadow: -1px -3px 0 0 #bfbfb4
+}
+
+#left-border, #right-border {
+  height: calc(100% + 20px);
+  top: -10px;
+  box-shadow: -1px -3px 0 0 #bfbfb4;
 }
 </style>
 
