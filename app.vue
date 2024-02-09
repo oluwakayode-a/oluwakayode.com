@@ -4,41 +4,44 @@
       <img src="~/assets/images/Vector.svg" class="w-full" alt="">
     </span>
 
-    <header class="px-[1.5rem] md:w-[70%] md:mx-auto pt-[2.5rem]">
-      <div class="border-2 border-black relative p-4 md:p-0 shadow-custom">
-        <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -top-[5px] -left-[5px]"></span>
-        <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -top-[5px] -right-[5px]"></span>
-        <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -bottom-[5px] -left-[5px]"></span>
-        <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -bottom-[5px] -right-[5px]"></span>
+    <header class="lg:pb-[3rem] lg:border-b-4 lg:border-black">
+      <div class="px-[1.5rem] md:w-[70%] md:mx-auto pt-[2.5rem]">
 
-        <div class="flex justify-between md:justify-normal">
-          <a href="/" class="md:border-r-black md:border-r-2">
-            <div class="flex items-center gap-3 md:p-4">
-              <img src="~/assets/images/logo.jpg" alt="" class="w-10">
-              <span class="font-bold text-lg">Oluwakayode</span>
+        <div class="border-2 border-black relative p-4 md:p-0 shadow-custom md:max-w-fit md:mx-0">
+          <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -top-[5px] -left-[5px]"></span>
+          <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -top-[5px] -right-[5px]"></span>
+          <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -bottom-[5px] -left-[5px]"></span>
+          <span class="w-2 h-2 z-1 bg-white border-[2.01px] border-black absolute -bottom-[5px] -right-[5px]"></span>
+  
+          <div class="flex justify-between md:justify-normal">
+            <a href="/" class="md:border-r-black md:border-r-2">
+              <div class="flex items-center gap-3 md:p-4">
+                <img src="~/assets/images/logo.jpg" alt="" class="w-10">
+                <span class="font-bold text-lg">Oluwakayode</span>
+              </div>
+            </a>
+  
+            <div class="hidden md:flex">
+              <a href="#about" class="flex items-center md:border-r-black md:border-r-2">
+                <span class="p-4 font-bold">About</span>
+              </a>
+    
+              <a href="#portfolio" class="flex items-center md:border-r-black md:border-r-2">
+                <span class="p-4 font-bold">Portfolio</span>
+              </a>
+    
+              <a href="#portfolio" class="flex items-center ">
+                <span class="p-4 font-bold">Hire Me</span>
+              </a>
             </div>
-          </a>
-
-          <div class="hidden md:flex">
-            <a href="#about" class="flex items-center md:border-r-black md:border-r-2">
-              <span class="p-4 font-bold">About</span>
-            </a>
   
-            <a href="#portfolio" class="flex items-center md:border-r-black md:border-r-2">
-              <span class="p-4 font-bold">Portfolio</span>
-            </a>
-  
-            <a href="#portfolio" class="flex items-center ">
-              <span class="p-4 font-bold">Hire Me</span>
-            </a>
+            
+            <svg class="w-8 h-8 block md:hidden cursor-pointer" @click="() => showNavBar = !showNavBar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
           </div>
-
-          
-          <svg class="w-8 h-8 block md:hidden cursor-pointer" @click="() => showNavBar = !showNavBar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
+  
         </div>
-
       </div>
     </header>
 
@@ -60,7 +63,8 @@
     </nav>
 
 
-    <section class="pt-[6rem] px-[1.5rem] md:flex md:items-center md:max-w-2xl md:mx-auto">
+    <section class="pt-[6rem] lg:pt-12rem px-[1.5rem] md:flex 
+      md:items-center md:max-w-2xl lg:max-w-full md:mx-auto justify-center">
       <div>
         <img src="~/assets/images/Frame 14.svg" alt="">
         
@@ -77,13 +81,12 @@
         </div>
       </div>
 
-      <div class="pt-[4.26rem]">
+      <div class="pt-[4.26rem] ">
         <div class="relative sm:w-[60%] md:w-full">
           <img src="~/assets/images/Size7.png" alt="" class="w-full object-contain">
-          <img src="~/assets/images/Arrow_07.png" class="absolute -top-[3.2rem] right-[5rem]" alt="">
-          <img src="~/assets/images/Frame 20.svg" class="absolute -top-[1rem] left-[2rem]" alt="">
-          <span class="absolute uppercase -top-3 left-[3.6rem] -rotate-[40deg] font-medium">kay</span>
-
+          <img src="~/assets/images/Arrow_07.png" class="absolute -top-[3.2rem] md:-top-[4.5rem] right-[5rem]" alt="">
+          <img src="~/assets/images/Frame 20.svg" class="absolute -top-[1rem] left-[2rem] md:left-0 md:-top-[4rem]" alt="">
+          <span class="absolute uppercase -top-3 md:-top-[5rem] left-[3.6rem] md:left-[1.5rem] -rotate-[40deg] font-medium">kay</span>
         </div>
       </div>
     </section>
@@ -165,7 +168,7 @@
     </section>
 
     <section class="pt-[4.5rem] px-[1.5rem]">
-      <h1 class="font-medium text-[24px]">
+      <h1 class="font-medium text-[24px] lg:text-[48px]">
         Here’s what my clients <br> are saying about my work
       </h1>
 
@@ -186,7 +189,11 @@
         </defs>
       </svg>
 
-      <div class="grid grid-cols-1 gap-4 sm:gap-7 md:gap-9 [&>*:nth-child(odd)]:rotate-3 [&>*:nth-child(even)]:-rotate-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7 md:gap-12 lg:mt-10 
+      [&>*:nth-child(odd)]:rotate-3 
+      lg:[&>*:nth-child(even)]:-ml-[3rem]
+      lg:[&>*:nth-child(even)]:z-20
+      [&>*:nth-child(even)]:-rotate-3">
         <div class="border-2 border-black p-5 shadow-[5.73px_5.73px_0px_0px_#BFBFB4]" v-for="review in reviews">
           <div class="font-medium text-[15px]">
             {{ review.text }}
@@ -209,7 +216,7 @@
       <div class="relative border-2 border-black shadow-[5.73px_5.73px_0px_0px_#BFBFB4] px-4 py-[3.74rem]">
         <img src="~/assets/images/Vector (3).svg" alt="" class="absolute -top-10 inset-x-[35%]">
 
-        <h1 class="font-medium text-lg text-center">
+        <h1 class="font-medium text-lg lg:text-4xl text-center">
           Looking to build the next big thing?
         </h1>
 
