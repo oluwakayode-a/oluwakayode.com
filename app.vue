@@ -19,17 +19,19 @@
             </div>
           </a>
 
-          <a href="#about" class="flex items-center md:border-r-black md:border-r-2">
-            <span class="p-4 font-bold">About</span>
-          </a>
-
-          <a href="#portfolio" class="flex items-center md:border-r-black md:border-r-2">
-            <span class="p-4 font-bold">Portfolio</span>
-          </a>
-
-          <a href="#portfolio" class="flex items-center ">
-            <span class="p-4 font-bold">Hire Me</span>
-          </a>
+          <div class="hidden md:flex">
+            <a href="#about" class="flex items-center md:border-r-black md:border-r-2">
+              <span class="p-4 font-bold">About</span>
+            </a>
+  
+            <a href="#portfolio" class="flex items-center md:border-r-black md:border-r-2">
+              <span class="p-4 font-bold">Portfolio</span>
+            </a>
+  
+            <a href="#portfolio" class="flex items-center ">
+              <span class="p-4 font-bold">Hire Me</span>
+            </a>
+          </div>
 
           
           <svg class="w-8 h-8 block md:hidden cursor-pointer" @click="() => showNavBar = !showNavBar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -58,30 +60,35 @@
     </nav>
 
 
-    <section class="pt-[6rem] px-[1.5rem]">
-      <img src="~/assets/images/Frame 14.svg" alt="">
-      <p class="text-[2.265rem] font-bold stroke-black stroke-2">
-        I build ✍️ top notch <span class="text-highlight">web apps</span> 
-      </p>
+    <section class="pt-[6rem] px-[1.5rem] md:flex md:items-center md:max-w-2xl md:mx-auto">
+      <div>
+        <img src="~/assets/images/Frame 14.svg" alt="">
+        
+        <p class="text-[2.265rem] font-bold stroke-black stroke-2">
+          I build ✍️ top notch <span class="text-highlight">web apps</span> 
+        </p>
+  
+        <div class="relative">
+          <a href="#portfolio" class="inline-block border-4 border-black font-bold mt-[1.5rem] rotate-[0.543deg] px-[1.8rem] py-[1rem] bg-[#BAE6FF] text-base rounded-[3rem]">
+            Let's talk!
+          </a>
+  
+          <img src="~/assets/images/Frame 13.svg" class="absolute left-[8.6rem] -bottom-[1rem]" alt="">
+        </div>
+      </div>
 
-      <div class="relative">
-        <a href="#portfolio" class="inline-block border-4 border-black font-bold mt-[1.5rem] rotate-[0.543deg] px-[1.8rem] py-[1rem] bg-[#BAE6FF] text-base rounded-[3rem]">
-          Let's talk!
-        </a>
+      <div class="pt-[4.26rem]">
+        <div class="relative sm:w-[60%] md:w-full">
+          <img src="~/assets/images/Size7.png" alt="" class="w-full object-contain">
+          <img src="~/assets/images/Arrow_07.png" class="absolute -top-[3.2rem] right-[5rem]" alt="">
+          <img src="~/assets/images/Frame 20.svg" class="absolute -top-[1rem] left-[2rem]" alt="">
+          <span class="absolute uppercase -top-3 left-[3.6rem] -rotate-[40deg] font-medium">kay</span>
 
-        <img src="~/assets/images/Frame 13.svg" class="absolute left-[8.6rem] -bottom-[1rem]" alt="">
+        </div>
       </div>
     </section>
 
-    <section class="px-[1.5rem] pt-[4.26rem]">
-      <div class="relative sm:w-[60%]">
-        <img src="~/assets/images/Size7.png" alt="" class="w-full object-contain">
-        <img src="~/assets/images/Arrow_07.png" class="absolute -top-[3.2rem] right-[5rem]" alt="">
-        <img src="~/assets/images/Frame 20.svg" class="absolute -top-[1rem] left-[2rem]" alt="">
-        <span class="absolute uppercase -top-3 left-[3.6rem] -rotate-[40deg] font-medium">kay</span>
-
-      </div>
-    </section>
+    
 
     <section class="pt-[3rem]">
       <div class="relative">
@@ -179,7 +186,7 @@
         </defs>
       </svg>
 
-      <div class="grid grid-cols-1 gap-4 sm:gap-7 [&>*:nth-child(odd)]:rotate-3 [&>*:nth-child(even)]:-rotate-3">
+      <div class="grid grid-cols-1 gap-4 sm:gap-7 md:gap-9 [&>*:nth-child(odd)]:rotate-3 [&>*:nth-child(even)]:-rotate-3">
         <div class="border-2 border-black p-5 shadow-[5.73px_5.73px_0px_0px_#BFBFB4]" v-for="review in reviews">
           <div class="font-medium text-[15px]">
             {{ review.text }}
