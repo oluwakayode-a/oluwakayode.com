@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative overflow-hidden">
     <span class="absolute right-0">
       <img src="~/assets/images/Vector.svg" class="w-full" alt="">
     </span>
@@ -21,17 +21,17 @@
               </div>
             </a>
   
-            <div class="hidden md:flex">
+            <div class="hidden md:flex" id="nav-group-main">
               <a href="#about" class="flex items-center md:border-r-black md:border-r-2">
-                <span class="p-4 font-bold">About</span>
+                <span class="py-4 px-8 font-bold">About</span>
               </a>
     
               <a href="#portfolio" class="flex items-center md:border-r-black md:border-r-2">
-                <span class="p-4 font-bold">Portfolio</span>
+                <span class="py-4 px-8 font-bold">Portfolio</span>
               </a>
     
               <a href="#portfolio" class="flex items-center ">
-                <span class="p-4 font-bold">Hire Me</span>
+                <span class="py-4 px-8 font-bold">Hire Me</span>
               </a>
             </div>
   
@@ -46,51 +46,86 @@
     </header>
 
     
-    <nav class="px-[1.5rem] mt-4 block md:hidden" v-show="showNavBar">
-      <ul>
-        <li class="border-2 mb-2 border-black text-lg p-[1.38rem] font-bold">
-          <a href="">Projects</a>
-        </li>
-        <li class="border-2 mb-2 border-black text-lg p-[1.38rem] font-bold">
-          <a href="">Resume</a>
-        </li>
-        <li class="border-2 border-black text-lg p-[1.38rem] font-bold">
-          <a href="">Let's Talk!</a>
-        </li>
-      </ul>
+    <Transition name="slide-fade">
+      <nav class="px-[1.5rem] mt-4 block md:hidden" v-show="showNavBar">
+        <ul id="nav-group">
+          <li class="cursor-pointer border-2 mb-2 border-black text-lg p-[1.38rem] font-bold">
+            <a href="">About</a>
+          </li>
+          <li class="cursor-pointer border-2 mb-2 border-black text-lg p-[1.38rem] font-bold">
+            <a href="">Portfolio</a>
+          </li>
+          <li class="cursor-pointer border-2 border-black text-lg p-[1.38rem] font-bold">
+            <a href="">Hire Me</a>
+          </li>
+        </ul>
 
-      <span class="font-bold text-red-300 float-right cursor-pointer" @click="() => showNavBar = !showNavBar">x Close</span>
-    </nav>
-
+        <span class="font-bold text-red-300 float-right cursor-pointer" @click="() => showNavBar = !showNavBar">x Close</span>
+      </nav>
+    </Transition>
 
     <section class="pt-[6rem] lg:pt-12rem px-[1.5rem] md:flex 
-      md:items-center md:max-w-2xl lg:max-w-full md:mx-auto justify-center">
-      <div>
-        <img src="~/assets/images/Frame 14.svg" alt="">
-        
-        <p class="text-[2.265rem] font-bold stroke-black stroke-2">
-          I build ✍️ top notch <span class="text-highlight">web apps</span> 
-        </p>
-  
-        <div class="relative">
-          <a href="#portfolio" class="inline-block border-4 border-black font-bold mt-[1.5rem] rotate-[0.543deg] px-[1.8rem] py-[1rem] bg-[#BAE6FF] text-base rounded-[3rem]">
-            Let's talk!
-          </a>
-  
-          <img src="~/assets/images/Frame 13.svg" class="absolute left-[8.6rem] -bottom-[1rem]" alt="">
+        md:items-center md:max-w-2xl lg:max-w-full md:mx-auto justify-center overflow-hidden">
+        <div id="particle-container">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
         </div>
-      </div>
-
-      <div class="pt-[4.26rem] ">
-        <div class="relative sm:w-[60%] md:w-full">
-          <img src="~/assets/images/Size7.png" alt="" class="w-full object-contain">
-          <img src="~/assets/images/Arrow_07.png" class="absolute -top-[3.2rem] md:-top-[4.5rem] right-[5rem]" alt="">
-          <img src="~/assets/images/Frame 20.svg" class="absolute -top-[1rem] left-[2rem] md:left-0 md:-top-[4rem]" alt="">
-          <span class="absolute uppercase -top-3 md:-top-[5rem] left-[3.6rem] md:left-[1.5rem] -rotate-[40deg] font-medium">kay</span>
+        <div>
+          <img src="~/assets/images/Frame 14.svg" alt="">
+          
+          <p class="text-[2.265rem] font-bold stroke-black stroke-2">
+            I build ✍️ top notch <span class="text-highlight">web apps</span> 
+          </p>
+    
+          <div class="relative">
+            <a href="#portfolio" class="hover:scale-105
+              hover:-translate-x-2
+              hover:-translate-y-3
+              transition inline-block border-4 border-black font-bold mt-[1.5rem] rotate-[0.543deg] px-[1.8rem] py-[1rem] bg-[#BAE6FF] text-base rounded-[3rem]">
+              Let's talk!
+            </a>
+    
+            <img src="~/assets/images/Frame 13.svg" class="absolute left-[8.6rem] -bottom-[1rem]" alt="">
+          </div>
         </div>
-      </div>
-    </section>
 
+        <div class="pt-[4.26rem] ">
+          <div class="relative sm:w-[60%] md:w-full">
+            <img src="~/assets/images/Size7.png" alt="" class="w-full object-contain">
+            <img src="~/assets/images/Arrow_07.png" class="absolute -top-[3.2rem] md:-top-[4.5rem] right-[5rem]" alt="">
+            <img src="~/assets/images/Frame 20.svg" class="absolute -top-[1rem] left-[2rem] md:left-0 md:-top-[4rem]" alt="">
+            <span class="absolute uppercase -top-3 md:-top-[5rem] left-[3.6rem] md:left-[1.5rem] -rotate-[40deg] font-medium">kay</span>
+          </div>
+        </div>
+      </section>
     
 
     <section class="pt-[3rem]">
@@ -111,7 +146,7 @@
       </Vue3Marquee>
     </section>
 
-    <section class="px-[1.5rem] pt-[3.34rem]">
+    <section class="px-[1.5rem] pt-[3.34rem]" id="portfolio">
 
       <div class="flex justify-center gap-6 sm:gap-10">
         <div class="relative">
@@ -205,6 +240,7 @@
             <div>
               <h3 class="font-semibold text-[15px]">{{ review.name }}</h3>
               <h4 class="font-medium text-[12px]">{{ review.portfolio }}</h4>
+              <a :href="review.link" class="font-medium text-[12px] text-purple-600 hover:underline" target="_blank"> {{ review.link }} </a>
             </div>
           </div>
         </div>
@@ -221,10 +257,18 @@
         </h1>
 
         <div class="flex justify-center items-end">
-          <button class="border-4 shadow-[4.73px_4.73px_0px_0px_#BFBFB4] border-black font-bold mt-[1.5rem] px-[1.8rem] py-[0.6rem] bg-[#BAE6FF] text-base rounded-[3rem]">
+          <a href="mailto:oladipokayode0@gmail.com"
+            target="_blank"
+            class="border-4 shadow-[4.73px_4.73px_0px_0px_#BFBFB4] border-black 
+            font-bold mt-[1.5rem] px-[1.8rem] py-[0.6rem] bg-[#BAE6FF] 
+            text-base rounded-[3rem]
+            hover:scale-105
+            hover:-translate-x-2
+            hover:-translate-y-3
+            transition
+            ">
             Let's Talk
-          </button>
-
+          </a>
         </div>
       </div>
     </section>
@@ -241,18 +285,18 @@
 
 
       <div class="flex justify-center gap-6">
-        <a href="">
+        <a href="https://github.com/oluwakayode-a" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-6 h-6">
             <g fill="#181616">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g>
           </svg>
         </a>
 
-        <a href="">
+        <a href="https://www.linkedin.com/in/kayode-oladipo/" target="_blank">
           <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#0076b2" d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z"/><path fill="#fff" d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"/></svg>
         </a>
 
-        <a href="">
+        <a href="https://twitter.com/oluwakayodeA_" target="_blank">
           <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#1d9bf0" d="M114.896 37.888c.078 1.129.078 2.257.078 3.396 0 34.7-26.417 74.72-74.72 74.72v-.02A74.343 74.343 0 0 1 0 104.21c2.075.25 4.16.375 6.25.38a52.732 52.732 0 0 0 32.615-11.263A26.294 26.294 0 0 1 14.331 75.09c3.937.76 7.993.603 11.857-.453-12.252-2.475-21.066-13.239-21.066-25.74v-.333a26.094 26.094 0 0 0 11.919 3.287C5.5 44.139 1.945 28.788 8.913 16.787a74.535 74.535 0 0 0 54.122 27.435 26.277 26.277 0 0 1 7.598-25.09c10.577-9.943 27.212-9.433 37.154 1.139a52.696 52.696 0 0 0 16.677-6.376A26.359 26.359 0 0 1 112.92 28.42 52.227 52.227 0 0 0 128 24.285a53.35 53.35 0 0 1-13.104 13.603z"/></svg>
         </a>
         
@@ -264,7 +308,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .text-highlight {
   position: relative;
 }
@@ -290,10 +334,63 @@
   top: -10px;
   box-shadow: -1px -3px 0 0 #bfbfb4;
 }
+
+/* we will explain what these classes do next! */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+#nav-group > li:hover, #nav-group-main > a:hover {
+  background:
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #fff;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  transition: background 0.3s ease-in-out;
+}
+
+.particle {
+	position: absolute;
+ 	border-radius: 50%;
+}
+
+@for $i from 1 through 30 {
+	@keyframes particle-animation-#{$i} {
+		100% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		}
+	}
+	
+	.particle:nth-child(#{$i}){
+		animation: particle-animation-#{$i} 60s infinite;
+		$size: random(5) + 7 + px;
+		opacity: random(100)/100;
+		height: $size;
+		width: $size;
+		animation-delay: -$i * .2s;
+		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		background: hsl(random(360), 70%, 50%);
+	}
+}
 </style>
 
 <script setup lang="ts">
 import { skills, projects, reviews } from "~/utils"
+import type { Container } from '@tsparticles/engine'
 
 useHead({
   title: "Kayode Oladipo | Fullstack Software Developer"
@@ -304,4 +401,5 @@ function goToPage(link: string) {
 }
 
 const showNavBar = ref(false)
+
 </script>

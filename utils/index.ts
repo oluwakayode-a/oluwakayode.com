@@ -75,7 +75,8 @@ export const reviews = [
     {
         "name" : "Peter Kallas",
         "portfolio" : "Founder, Market Jungle",
-        "image" : "https://media.licdn.com/dms/image/D4E03AQHwYV636kRTsA/profile-displayphoto-shrink_100_100/0/1694270822036?e=1712188800&v=beta&t=nKu-keSh0QIKeNzTb2WeQFmLuSDYvPcIKSgkKTXRvpg",
+        "link": "https://marketjungle.io",
+        "image" : "/images/pk3.jpeg",
         "text" : `
         I have had the pleasure of working with Kayode for over a year now, and I must say that his contributions 
         to our startup, Market Jungle, have been invaluable. Kayode is undoubtedly an asset to any project or team, and we highly recommend his services.
@@ -84,7 +85,8 @@ export const reviews = [
     {
         "name" : "Austin Kerr",
         "portfolio" : "Founder/CEO, Humanagement.io",
-        "image" : "https://media.licdn.com/dms/image/C5603AQG-AStz_xwgDg/profile-displayphoto-shrink_100_100/0/1532102341497?e=1712188800&v=beta&t=WWjPLeStMrb-VKCoug1qysgVesKS0Rkh3PRXLEienFc",
+        "link": "https://humanagement.io",
+        "image" : "/images/austinkerr.jpeg",
         "text" : `
             Kayode is knowledgeable and 
             very intelligent as a developer. He did great work setting up a video recording api so I could record and store videos in my application, as well as many other fixes. A+ would recommend
